@@ -1,4 +1,4 @@
-# 🛡️ LabelGuard
+# 🛡️ Check It
 
 <div align="center">
   <img src="assets/images/app_logo.png" alt="LabelGuard Logo" width="150"/>
