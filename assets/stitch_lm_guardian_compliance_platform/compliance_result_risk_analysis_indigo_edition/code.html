@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LM-GUARDIAN - Compliance Result</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-error-container": "#93000a",
+                "secondary": "#516072",
+                "error": "#ba1a1a",
+                "surface-container-highest": "#e0e3e5",
+                "on-surface-variant": "#44474c",
+                "surface-container-low": "#f2f4f6",
+                "surface": "#f7f9fb",
+                "compliance-red": "#DC2626",
+                "on-primary-fixed-variant": "#3a475b",
+                "primary-fixed": "#d6e3fc",
+                "on-primary-container": "#98a5bc",
+                "primary-container": "#2e3b4e",
+                "on-primary": "#ffffff",
+                "surface-dim": "#d8dadc",
+                "surface-container": "#eceef0",
+                "on-secondary": "#ffffff",
+                "compliance-green": "#059669",
+                "secondary-fixed": "#d4e4fa",
+                "surface-container-lowest": "#ffffff",
+                "silver-gray": "#94A3B8",
+                "on-tertiary": "#ffffff",
+                "indigo-slate": "#2E3B4E",
+                "inverse-primary": "#bac7df",
+                "on-secondary-container": "#556477",
+                "surface-tint": "#525f74",
+                "forest-emerald": "#064E3B",
+                "on-primary-fixed": "#0e1c2e",
+                "tertiary-fixed": "#b0f0d6",
+                "secondary-fixed-dim": "#b9c8de",
+                "tertiary-container": "#004332",
+                "tertiary": "#002b1f",
+                "soft-mint": "#ECFDF5",
+                "secondary-container": "#d2e1f7",
+                "on-secondary-fixed-variant": "#39485a",
+                "primary": "#182537",
+                "surface-container-high": "#e6e8ea",
+                "outline": "#75777d",
+                "inverse-on-surface": "#eff1f3",
+                "primary-fixed-dim": "#bac7df",
+                "on-error": "#ffffff",
+                "surface-variant": "#e0e3e5",
+                "on-surface": "#191c1e",
+                "on-tertiary-fixed": "#002117",
+                "background": "#f7f9fb",
+                "outline-variant": "#c5c6cd",
+                "on-tertiary-container": "#73b098",
+                "inverse-surface": "#2d3133",
+                "on-tertiary-fixed-variant": "#0b513d",
+                "error-container": "#ffdad6",
+                "compliance-amber": "#D97706",
+                "tertiary-fixed-dim": "#95d3ba",
+                "on-background": "#191c1e",
+                "surface-bright": "#f7f9fb",
+                "on-secondary-fixed": "#0d1c2d"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "stack-sm": "0.5rem",
+                "touch-target": "2.75rem",
+                "stack-md": "1rem",
+                "stack-lg": "2rem",
+                "margin-page": "1.5rem",
+                "gutter-grid": "1rem"
+        },
+        "fontFamily": {
+                "display-lg": [
+                        "Inter"
+                ],
+                "title-lg": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "headline-sm": [
+                        "Inter"
+                ],
+                "label-sm": [
+                        "Inter"
+                ],
+                "label-md": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-sm-mobile": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "display-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "title-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "11px",
+                        {
+                                "lineHeight": "14px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "label-md": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-sm-mobile": [
+                        "18px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-safe flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim shadow-sm flex justify-between items-center w-full px-margin-page py-2 docked full-width top-0 z-40">
+<button class="w-touch-target h-touch-target flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex-1 flex justify-center">
+<h1 class="text-title-lg font-title-lg font-bold text-primary dark:text-primary-fixed-dim tracking-tight">LM-GUARDIAN</h1>
+</div>
+<button class="w-touch-target h-touch-target flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-margin-page py-stack-md max-w-2xl mx-auto w-full mb-[80px] md:mb-0">
+<!-- Status Header Card -->
+<section class="bg-surface-container-lowest rounded-xl p-4 shadow-sm border-l-4 border-l-compliance-amber mb-stack-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2 text-compliance-amber">
+<span class="material-symbols-outlined">warning</span>
+<h2 class="text-headline-sm-mobile font-headline-sm-mobile">REVIEW REQUIRED</h2>
+</div>
+<div class="text-right">
+<span class="text-headline-sm-mobile font-headline-sm-mobile text-primary">84%</span>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase">Confidence Score</p>
+</div>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">
+                Manual verification needed for regulatory compliance.
+            </p>
+</section>
+<!-- Product Summary -->
+<section class="bg-surface-container-lowest rounded-xl p-4 shadow-sm mb-stack-md flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-variant flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="A small white medical bottle of Aspirin 500mg, brightly lit on a neutral background, high contrast, clinical setting style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkIui-FCcffF-AlLmXaQtvLmewdLltrRnXOItp4-P7ykrt4qAkTJZ154eapQ0O7cgq3Dxg9XfN9ckhIbr0jNCLekRL1QN-zin8mb9GJx_FpZYCwbgMv5qCxWABsmHOo1PmI7NovyuNkjQWvLMgGJbeeO9ISGuL_VkPPNQOu0xHfRvcRj2VsDFxTF7HpgDYuqHHUH1ELQFPEY97_yMv-ge6SrF6vu4HroTxK0_kA0Mz0S3cWJRImTzxbg"/>
+</div>
+<div>
+<h3 class="text-body-lg font-body-lg font-semibold text-on-surface">Aspirin 500mg Extra Strength</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">PharmaCorp Ind.</p>
+</div>
+</section>
+<!-- Checklist Analysis -->
+<section class="bg-surface-container-lowest rounded-xl p-4 shadow-sm mb-stack-md">
+<h3 class="text-body-lg font-body-lg font-semibold text-on-surface mb-4">Checklist Analysis</h3>
+<div class="space-y-3">
+<!-- Verified Item -->
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-compliance-green text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-md font-body-md text-on-surface">Product Identity</span>
+</div>
+<span class="text-body-md font-body-md text-compliance-green font-medium">Verified</span>
+</div>
+<!-- Verified Item -->
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-compliance-green text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-md font-body-md text-on-surface">Net Quantity</span>
+</div>
+<span class="text-body-md font-body-md text-compliance-green font-medium">Verified</span>
+</div>
+<!-- Verified Item -->
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-compliance-green text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-md font-body-md text-on-surface">Manufacturer Details</span>
+</div>
+<span class="text-body-md font-body-md text-compliance-green font-medium">Verified</span>
+</div>
+<!-- Flagged Item -->
+<div class="flex items-center justify-between p-2 -mx-2 bg-[#FEF3C7] rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-compliance-amber text-[20px]" style="font-variation-settings: 'FILL' 1;">error</span>
+<span class="text-body-md font-body-md text-on-surface">MRP Declaration</span>
+</div>
+<span class="text-body-md font-body-md text-compliance-amber font-medium">Flagged</span>
+</div>
+<!-- Missing Item -->
+<div class="flex items-center justify-between p-2 -mx-2 bg-[#FEE2E2] rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-compliance-red text-[20px]" style="font-variation-settings: 'FILL' 1;">cancel</span>
+<span class="text-body-md font-body-md text-on-surface">Consumer Info</span>
+</div>
+<span class="text-body-md font-body-md text-compliance-red font-medium">Missing</span>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<section class="flex flex-col gap-3 mt-stack-lg">
+<button class="w-full h-touch-target bg-primary-container text-on-primary-container rounded-lg text-body-md font-body-md font-medium flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">folder_open</span>
+                VIEW EVIDENCE
+            </button>
+<button class="w-full h-touch-target border border-outline text-primary rounded-lg text-body-md font-body-md font-medium flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">description</span>
+                GENERATE REPORT
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-touch-target flex justify-around items-center bg-surface-container dark:bg-surface-container-highest px-2 pb-safe shadow-lg rounded-t-xl z-50">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-lg p-1 min-w-[64px] h-full transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-sm font-label-sm mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-lg p-1 min-w-[64px] h-full transition-colors">
+<span class="material-symbols-outlined">history</span>
+<span class="text-label-sm font-label-sm mt-1">History</span>
+</button>
+<!-- FAB - Integrated into nav -->
+<div class="relative -top-5">
+<button class="w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">document_scanner</span>
+</button>
+</div>
+<button class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold opacity-80 scale-95 transition-all bg-surface-variant rounded-lg p-1 min-w-[64px] h-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="text-label-sm font-label-sm mt-1">Reports</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-lg p-1 min-w-[64px] h-full transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-sm font-label-sm mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

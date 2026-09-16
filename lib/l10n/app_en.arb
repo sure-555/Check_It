@@ -1,0 +1,160 @@
+{
+  "@@locale": "en",
+  
+  "appTitle": "CheckIt",
+  
+  "loginContinueAsGuest": "Continue as Guest",
+  "loginInspectorLogin": "Inspector Login",
+  "loginInspectorId": "Inspector ID",
+  "loginPin": "PIN",
+  "loginCancel": "Cancel",
+  "loginLoginBtn": "Login",
+  
+  "dashActiveShift": "ACTIVE SHIFT",
+  "dashInspectorDashboard": "Inspector Dashboard",
+  "dashReadyToBegin": "Ready to begin compliance checks for Sector 7G. Ensure all equipment is calibrated.",
+  "dashScanPackageLabel": "SCAN PACKAGE LABEL",
+  "dashTodaysOverview": "Today's Overview",
+  "dashLastUpdated": "Last updated: 10:42 AM",
+  "statInspected": "INSPECTED",
+  "statCompliant": "COMPLIANT",
+  "statViolations": "VIOLATIONS",
+  "statHighRisk": "HIGH RISK",
+  "dashRecentActivity": "Recent Activity",
+  "dashViewAllActivity": "View All Activity",
+  
+  "historyTitle": "Inspection History",
+  "historyTotalRecords": "Total: 47 Records",
+  "historySearchHint": "Search by product name or brand...",
+  "filterAll": "All",
+  "filterCritical": "Critical",
+  "filterMajor": "Major",
+  "filterMinor": "Minor",
+  "filterCompliant": "Compliant",
+  "dateToday": "Today",
+  "dateYesterday": "Yesterday",
+  "dateEarlier": "Earlier",
+  "violationsText": "{count, plural, =1{1 violation} other{{count} violations}}",
+  "@violationsText": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "profileTitle": "Inspector Profile",
+  "profileSyncNow": "Sync Now",
+  "profileAccountSettings": "Account Settings",
+  "profileLanguage": "Language",
+  "profileNotificationPreferences": "Notification Preferences",
+  "profileOfflineStorage": "Offline Storage & Sync",
+  "profileLegalRuleUpdates": "Legal & Rule Updates",
+  "profileSecurityBiometrics": "Security & Biometrics",
+  "profileAboutCheckIt": "About CheckIt",
+  "profileLogout": "Logout",
+  "logoutConfirmationTitle": "Logout",
+  "logoutConfirmationContent": "Are you sure you want to log out?",
+  "btnCancel": "Cancel",
+  "btnLogout": "Logout",
+  "selectLanguage": "Select Language",
+  
+  "editProfileTitle": "Edit Profile",
+  "editPersonalInformation": "Personal Information",
+  "editFullName": "Full Name",
+  "editInspectorId": "Inspector ID",
+  "editDepartment": "Department",
+  "editBadgeNumber": "Badge Number",
+  "editContactInformation": "Contact Information",
+  "editEmailAddress": "Email Address",
+  "editPhoneNumber": "Phone Number",
+  "editSaveChanges": "Save Changes",
+  "editChangeAvatar": "Change Avatar",
+  
+  "notifTitle": "Notification Settings",
+  "notifAlertsAndNotifications": "Alerts & Notifications",
+  "notifScanAlerts": "Scan Alerts",
+  "notifScanAlertsDesc": "Get notified when a product fails scan",
+  "notifCriticalAlerts": "Critical Violation Alerts",
+  "notifCriticalAlertsDesc": "Immediate alerts for severe non-compliance",
+  "notifReportAlerts": "Report Alerts",
+  "notifReportAlertsDesc": "Notifications when PDF reports are ready",
+  "notifDailySummary": "Daily Summary",
+  "notifDailySummaryDesc": "Get a daily summary of all inspections",
+  "notifAppSounds": "App Sounds",
+  "notifSoundEffects": "Sound Effects",
+  "notifSoundEffectsDesc": "Play sounds for successful/failed scans",
+  "notifVibration": "Vibration",
+  "notifVibrationDesc": "Vibrate on scan completion",
+  
+  "ruleUpdatesTitle": "Legal & Rule Updates",
+  "ruleCurrentVersion": "Current Version",
+  "ruleFssaiVersion": "FSSAI Guidelines v2024.1",
+  "ruleLastUpdated": "Last updated: Oct 12, 2026",
+  "ruleRecentChanges": "Recent Changes",
+  "ruleChangeAllergen": "New Allergen Declaration Rules",
+  "ruleChangeAllergenDesc": "Updated requirements for declaring trace allergens on primary packaging.",
+  "ruleChangeServing": "Standardized Serving Sizes",
+  "ruleChangeServingDesc": "New standardized metrics for nutritional information per 100g/100ml.",
+  "ruleChangeQr": "Mandatory QR Code on Packaging",
+  "ruleChangeQrDesc": "Implementation timeline for mandatory digital traceability QR codes.",
+  "ruleCheckForUpdates": "Check for Updates",
+  
+  "scanInstructionFront": "Scan the FRONT label",
+  "scanInstructionLeft": "Scan the LEFT side",
+  "scanInstructionRight": "Scan the RIGHT side",
+  "scanInstructionAlign": "Align the label inside the frame",
+  "scanStatusSearching": "Searching...",
+  "scanStatusLabelDetected": "Label detected",
+  "scanStatusHoldSteady": "Hold steady",
+  "scanStatusCaptured": "Captured!",
+  "scanBtnRetake": "RETAKE",
+  "scanBtnContinue": "CONTINUE",
+  "scanSideFront": "FRONT",
+  "scanSideLeft": "LEFT",
+  "scanSideRight": "RIGHT",
+  "scanBtnAnalyze": "ANALYZE",
+  "scanStatusCapturedTitle": "✓ {side} CAPTURED",
+  "@scanStatusCapturedTitle": {
+    "placeholders": {
+      "side": {
+        "type": "String"
+      }
+    }
+  },
+  "scanProgressText": "{completed}/{total} COMPLETE",
+  "@scanProgressText": {
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "analysisReportTitle": "Analysis Report",
+  "navHome": "Home",
+  "navHistory": "History",
+  "navReports": "Reports",
+  "navProfile": "Profile",
+  "navScan": "Scan",
+  
+  "msgProfileUpdated": "Profile successfully updated",
+  "editEmail": "Email Address",
+  "errEmailRequired": "Email is required",
+  "errEmailInvalid": "Enter a valid email",
+  "editPhone": "Phone Number",
+  "errPhoneRequired": "Phone number is required",
+  "errPhoneInvalid": "Phone number must be 10 digits",
+  "btnSaveChanges": "Save Changes",
+  "errNameRequired": "Name is required",
+  "notificationSettingsTitle": "Notification Settings",
+  "ruleLmpcTitle": "LMPC Act Updates",
+  "ruleLmpcSubtitle": "New packaging guidelines for electronics",
+  "ruleFssaiTitle": "FSSAI New Regulations",
+  "ruleFssaiSubtitle": "Updated allergen declaration rules",
+  "ruleDigitalEvidenceTitle": "Digital Evidence Protocol",
+  "ruleDigitalEvidenceSubtitle": "Acceptable formats for digital images"
+}

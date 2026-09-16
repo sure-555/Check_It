@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LM-GUARDIAN - AI Analysis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-error-container": "#93000a",
+                "secondary": "#516072",
+                "error": "#ba1a1a",
+                "surface-container-highest": "#e0e3e5",
+                "on-surface-variant": "#44474c",
+                "surface-container-low": "#f2f4f6",
+                "surface": "#f7f9fb",
+                "compliance-red": "#DC2626",
+                "on-primary-fixed-variant": "#3a475b",
+                "primary-fixed": "#d6e3fc",
+                "on-primary-container": "#98a5bc",
+                "primary-container": "#2e3b4e",
+                "on-primary": "#ffffff",
+                "surface-dim": "#d8dadc",
+                "surface-container": "#eceef0",
+                "on-secondary": "#ffffff",
+                "compliance-green": "#059669",
+                "secondary-fixed": "#d4e4fa",
+                "surface-container-lowest": "#ffffff",
+                "silver-gray": "#94A3B8",
+                "on-tertiary": "#ffffff",
+                "indigo-slate": "#2E3B4E",
+                "inverse-primary": "#bac7df",
+                "on-secondary-container": "#556477",
+                "surface-tint": "#525f74",
+                "forest-emerald": "#064E3B",
+                "on-primary-fixed": "#0e1c2e",
+                "tertiary-fixed": "#b0f0d6",
+                "secondary-fixed-dim": "#b9c8de",
+                "tertiary-container": "#004332",
+                "tertiary": "#002b1f",
+                "soft-mint": "#ECFDF5",
+                "secondary-container": "#d2e1f7",
+                "on-secondary-fixed-variant": "#39485a",
+                "primary": "#182537",
+                "surface-container-high": "#e6e8ea",
+                "outline": "#75777d",
+                "inverse-on-surface": "#eff1f3",
+                "primary-fixed-dim": "#bac7df",
+                "on-error": "#ffffff",
+                "surface-variant": "#e0e3e5",
+                "on-surface": "#191c1e",
+                "on-tertiary-fixed": "#002117",
+                "background": "#f7f9fb",
+                "outline-variant": "#c5c6cd",
+                "on-tertiary-container": "#73b098",
+                "inverse-surface": "#2d3133",
+                "on-tertiary-fixed-variant": "#0b513d",
+                "error-container": "#ffdad6",
+                "compliance-amber": "#D97706",
+                "tertiary-fixed-dim": "#95d3ba",
+                "on-background": "#191c1e",
+                "surface-bright": "#f7f9fb",
+                "on-secondary-fixed": "#0d1c2d"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "stack-sm": "0.5rem",
+                "touch-target": "2.75rem",
+                "stack-md": "1rem",
+                "stack-lg": "2rem",
+                "margin-page": "1.5rem",
+                "gutter-grid": "1rem"
+        },
+        "fontFamily": {
+                "display-lg": [
+                        "Inter"
+                ],
+                "title-lg": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "headline-sm": [
+                        "Inter"
+                ],
+                "label-sm": [
+                        "Inter"
+                ],
+                "label-md": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-sm-mobile": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "display-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "title-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "11px",
+                        {
+                                "lineHeight": "14px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "label-md": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-sm-mobile": [
+                        "18px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .scan-line {
+            animation: scan 2s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0%; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+        
+        .pulse-ring {
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            80%, 100% { transform: scale(2); opacity: 0; }
+        }
+
+        .data-point {
+            animation: float-up 3s ease-in-out infinite;
+        }
+        @keyframes float-up {
+            0%, 100% { transform: translateY(0); opacity: 0.3; }
+            50% { transform: translateY(-20px); opacity: 0.8; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased overflow-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<header class="bg-surface dark:bg-surface-dim shadow-sm docked full-width top-0 z-50 flex justify-between items-center w-full px-margin-page py-2">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-xl group-active:opacity-80 group-active:scale-95 transition-all">menu</span>
+</button>
+<h1 class="text-title-lg font-title-lg font-bold text-primary dark:text-primary-fixed-dim tracking-tight">LM-GUARDIAN</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-xl group-active:opacity-80 group-active:scale-95 transition-all">account_circle</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 relative flex flex-col items-center justify-start pt-8 pb-32 px-margin-page">
+<!-- Background Animation Effect (Simulating Data Extraction) -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden flex justify-center items-center opacity-30 z-0">
+<!-- Simulated blurred product image -->
+<div class="absolute inset-4 sm:inset-10 rounded-xl border-2 border-primary-container/20 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center filter blur-md" data-alt="A macro shot of a generic pharmaceutical or packaged commodity box in soft, cool studio lighting, meant as an abstract background placeholder for an AI scanning application." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnS_dXev4EeOAc_DZTwqVXCEyVWTTazQ5FcXOQMH6aAYVbOhni2f85xHdJXMkML5eJno_ISeFHiqLAwmEnNBCo_04cAS2xhPBaSbY52YJ7IAJ9YASOLURVIoRwueuxQhx7vKPaafgZcBHU9NfE3FexlUZGyT30cnKDXX_jWHp2JecQu2h9Qo7pR0CHmGJaidjAzBrUU1RrTUgMlr2TE5qfQJn0CRfNyZyAYHxGZtu-qu3XxGLKzGqyBg')"></div>
+<!-- Scanning Laser Line -->
+<div class="scan-line absolute left-0 w-full h-1 bg-primary-container shadow-[0_0_15px_rgba(46,59,78,0.8)] z-10"></div>
+</div>
+<!-- Abstract Data Points floating -->
+<div class="absolute w-2 h-2 rounded-full bg-primary data-point" style="left: 20%; top: 30%; animation-delay: 0s;"></div>
+<div class="absolute w-3 h-3 rounded-full bg-secondary data-point" style="left: 70%; top: 40%; animation-delay: 1s;"></div>
+<div class="absolute w-1.5 h-1.5 rounded-full bg-primary-container data-point" style="left: 40%; top: 70%; animation-delay: 0.5s;"></div>
+<div class="absolute w-2 h-2 rounded-full bg-secondary-container data-point" style="left: 80%; top: 20%; animation-delay: 1.5s;"></div>
+</div>
+<!-- Foreground Content Canvas -->
+<div class="relative z-10 w-full max-w-md mx-auto flex flex-col gap-6">
+<!-- Header Section -->
+<div class="text-center bg-surface/80 backdrop-blur-md rounded-2xl p-6 shadow-sm border border-surface-variant">
+<div class="relative inline-flex mb-4">
+<div class="pulse-ring absolute inset-0 rounded-full border-2 border-primary"></div>
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center relative z-10 shadow-lg">
+<span class="material-symbols-outlined text-on-primary text-3xl" style="font-variation-settings: 'FILL' 1;">document_scanner</span>
+</div>
+</div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface mb-2">Analyzing Product...</h2>
+<p class="text-body-md font-body-md text-outline">Extracting regulatory data points</p>
+</div>
+<!-- Progress List (Bento-style Glass Card) -->
+<div class="bg-surface/90 backdrop-blur-xl rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-surface-container-high flex flex-col gap-4 relative overflow-hidden">
+<!-- Live Extraction Badge -->
+<div class="absolute top-4 right-4 flex items-center gap-1.5 bg-secondary-container/20 text-on-secondary-container px-2 py-1 rounded-full border border-secondary-container/30">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-[10px] font-label-md font-bold uppercase tracking-wider">Live Extraction</span>
+</div>
+<div class="mt-4 flex flex-col gap-5">
+<!-- Step 1: Done -->
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-[#E6F4EA] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[#137333] text-sm font-bold">check</span>
+</div>
+<div class="flex-1">
+<p class="text-body-md font-body-md text-on-surface font-medium">Detect package</p>
+</div>
+</div>
+<!-- Step 2: Active -->
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center flex-shrink-0 shadow-md">
+<span class="material-symbols-outlined text-on-primary text-sm animate-spin">autorenew</span>
+</div>
+<div class="flex-1">
+<p class="text-body-md font-body-md text-primary font-semibold">Extracting text</p>
+<div class="w-full h-1.5 bg-surface-variant rounded-full mt-2 overflow-hidden">
+<div class="h-full bg-primary rounded-full w-2/3 animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Step 3: Pending -->
+<div class="flex items-center gap-4 opacity-50">
+<div class="w-8 h-8 rounded-full border-2 border-outline-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-outline text-sm">qr_code_scanner</span>
+</div>
+<div class="flex-1">
+<p class="text-body-md font-body-md text-on-surface">Reading QR/barcode</p>
+</div>
+</div>
+<!-- Step 4: Pending -->
+<div class="flex items-center gap-4 opacity-40">
+<div class="w-8 h-8 rounded-full border-2 border-outline-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-outline text-sm">fact_check</span>
+</div>
+<div class="flex-1">
+<p class="text-body-md font-body-md text-on-surface">Identifying declarations</p>
+</div>
+</div>
+<!-- Step 5: Pending -->
+<div class="flex items-center gap-4 opacity-30">
+<div class="w-8 h-8 rounded-full border-2 border-outline-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-outline text-sm">gavel</span>
+</div>
+<div class="flex-1">
+<p class="text-body-md font-body-md text-on-surface">Checking Legal Metrology rules</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<div class="fixed bottom-0 left-0 w-full p-4 bg-gradient-to-t from-surface via-surface/90 to-transparent z-40 pb-safe">
+<div class="max-w-md mx-auto flex justify-center pb-4">
+<button class="w-full max-w-[200px] bg-surface h-12 rounded-xl border border-outline-variant text-on-surface-variant font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-lg">close</span>
+                Cancel
+            </button>
+</div>
+</div>
+</body></html>

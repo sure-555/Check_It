@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>LM-GUARDIAN - Inspector Scan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-error-container": "#93000a",
+                "secondary": "#516072",
+                "error": "#ba1a1a",
+                "surface-container-highest": "#e0e3e5",
+                "on-surface-variant": "#44474c",
+                "surface-container-low": "#f2f4f6",
+                "surface": "#f7f9fb",
+                "compliance-red": "#DC2626",
+                "on-primary-fixed-variant": "#3a475b",
+                "primary-fixed": "#d6e3fc",
+                "on-primary-container": "#98a5bc",
+                "primary-container": "#2e3b4e",
+                "on-primary": "#ffffff",
+                "surface-dim": "#d8dadc",
+                "surface-container": "#eceef0",
+                "on-secondary": "#ffffff",
+                "compliance-green": "#059669",
+                "secondary-fixed": "#d4e4fa",
+                "surface-container-lowest": "#ffffff",
+                "silver-gray": "#94A3B8",
+                "on-tertiary": "#ffffff",
+                "indigo-slate": "#2E3B4E",
+                "inverse-primary": "#bac7df",
+                "on-secondary-container": "#556477",
+                "surface-tint": "#525f74",
+                "forest-emerald": "#064E3B",
+                "on-primary-fixed": "#0e1c2e",
+                "tertiary-fixed": "#b0f0d6",
+                "secondary-fixed-dim": "#b9c8de",
+                "tertiary-container": "#004332",
+                "tertiary": "#002b1f",
+                "soft-mint": "#ECFDF5",
+                "secondary-container": "#d2e1f7",
+                "on-secondary-fixed-variant": "#39485a",
+                "primary": "#182537",
+                "surface-container-high": "#e6e8ea",
+                "outline": "#75777d",
+                "inverse-on-surface": "#eff1f3",
+                "primary-fixed-dim": "#bac7df",
+                "on-error": "#ffffff",
+                "surface-variant": "#e0e3e5",
+                "on-surface": "#191c1e",
+                "on-tertiary-fixed": "#002117",
+                "background": "#f7f9fb",
+                "outline-variant": "#c5c6cd",
+                "on-tertiary-container": "#73b098",
+                "inverse-surface": "#2d3133",
+                "on-tertiary-fixed-variant": "#0b513d",
+                "error-container": "#ffdad6",
+                "compliance-amber": "#D97706",
+                "tertiary-fixed-dim": "#95d3ba",
+                "on-background": "#191c1e",
+                "surface-bright": "#f7f9fb",
+                "on-secondary-fixed": "#0d1c2d",
+                "status-green-dim": "rgba(5, 150, 105, 0.15)",
+                "status-green": "#059669"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "stack-sm": "0.5rem",
+                "touch-target": "2.75rem",
+                "stack-md": "1rem",
+                "stack-lg": "2rem",
+                "margin-page": "1.5rem",
+                "gutter-grid": "1rem",
+                "touch-target-min": "44px",
+                "stack-gap-sm": "0.5rem",
+                "stack-gap-md": "1rem",
+                "grid-gutter": "1rem",
+                "stack-gap-lg": "1.5rem",
+                "container-margin": "1.5rem"
+        },
+        "fontFamily": {
+                "display-lg": [
+                        "Inter"
+                ],
+                "title-lg": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "headline-sm": [
+                        "Inter"
+                ],
+                "label-sm": [
+                        "Inter"
+                ],
+                "label-md": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-sm-mobile": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "display-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "title-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "11px",
+                        {
+                                "lineHeight": "14px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "label-md": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-sm-mobile": [
+                        "18px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .scanner-bracket {
+            border: 2px solid white;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+        }
+        .scanner-bracket-tl { top: 0; left: 0; border-right: none; border-bottom: none; border-radius: 12px 0 0 0; }
+        .scanner-bracket-tr { top: 0; right: 0; border-left: none; border-bottom: none; border-radius: 0 12px 0 0; }
+        .scanner-bracket-bl { bottom: 0; left: 0; border-right: none; border-top: none; border-radius: 0 0 0 12px; }
+        .scanner-bracket-br { bottom: 0; right: 0; border-left: none; border-top: none; border-radius: 0 0 12px 0; }
+        
+        .scan-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #059669, transparent);
+            position: absolute;
+            animation: scan 2s infinite linear;
+            box-shadow: 0 0 8px 2px rgba(5, 150, 105, 0.4);
+        }
+        @keyframes scan {
+            0% { top: 10%; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { top: 90%; opacity: 0; }
+        }
+        
+        .glass-panel {
+            background: rgba(46, 59, 78, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-black text-on-surface h-screen w-full overflow-hidden flex flex-col font-sans">
+<!-- Camera Feed Background -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A blurred, slightly out-of-focus background of a large, industrial warehouse setting. Cardboard boxes are stacked on metal shelves. The lighting is bright and even, typical of a modern logistics center. The overall mood is active and industrial, viewed through the lens of a mobile device camera feed." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6SOi33LQ_DcIe5gF0GtMD2PXxfQ4v16KNW4Uj6Q-WeOTkigBLafReahmOT7XmPwDw5Et-JZbAmKRrv_0sdqVJEnSPuOUg1LIDN-iaQdQWLnUw3nv07m3mQ-Wg4x6x_xPOf4vDpuL-w9fsSGCF0JshUv7vAlixWHxbf6e09nMjZQWeeYhWpZ9IN5ulLAm0nEBjrPtV3N9F6qj6Ennu9OzIKlRyqm8W-ZKaF8o75HDBQopNcEuDLQJa4A')"></div>
+<!-- Slight dimming overlay for better UI contrast -->
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<!-- Top App Bar (Custom for Scan Screen) -->
+<header class="relative z-10 w-full flex items-center justify-between px-container-margin py-4 bg-gradient-to-b from-black/60 to-transparent">
+<button class="h-touch-target-min w-touch-target-min flex items-center justify-center text-white rounded-full hover:bg-white/10 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<h1 class="text-white text-title-lg font-title-lg font-semibold tracking-tight">Inspector Scan</h1>
+<div class="w-touch-target-min"></div> <!-- Spacer -->
+</header>
+<!-- Main Scanner Area -->
+<main class="relative z-10 flex-1 flex flex-col items-center justify-center w-full px-container-margin pointer-events-none">
+<!-- Top Status indicators -->
+<div class="absolute top-4 flex flex-col items-center gap-2">
+<div class="text-white font-mono text-sm bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">
+                10:48 AM
+            </div>
+<div class="flex items-center gap-2 bg-status-green-dim border border-status-green text-status-green px-4 py-1.5 rounded-full backdrop-blur-md shadow-lg">
+<span class="material-symbols-outlined text-[16px] animate-pulse" data-icon="fiber_manual_record" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+<span class="text-label-sm font-label-sm font-bold uppercase tracking-wider">Good framing</span>
+</div>
+</div>
+<!-- Scanning Frame -->
+<div class="relative w-full max-w-sm aspect-[3/4] mt-12">
+<!-- Floating Product Detected Chip -->
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-primary-container text-on-primary-container px-4 py-2 rounded-full shadow-lg whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-label-sm font-label-sm font-bold uppercase tracking-wide">PRODUCT DETECTED</span>
+</div>
+<!-- Frame Brackets -->
+<div class="scanner-bracket scanner-bracket-tl"></div>
+<div class="scanner-bracket scanner-bracket-tr"></div>
+<div class="scanner-bracket scanner-bracket-bl"></div>
+<div class="scanner-bracket scanner-bracket-br"></div>
+<!-- Animated Scan Line -->
+<div class="scan-line"></div>
+<!-- Focus Corners (Subtle inner frame) -->
+<div class="absolute inset-4 border border-white/20 rounded-lg"></div>
+</div>
+</main>
+<!-- Bottom Control Area -->
+<div class="relative z-20 w-full glass-panel rounded-t-[0.5rem] pt-6 pb-safe px-container-margin flex flex-col gap-6 shadow-[0_-8px_30px_rgba(0,0,0,0.3)] pointer-events-auto">
+<!-- Multi-side guide -->
+<div class="flex flex-col items-center gap-3 w-full max-w-md mx-auto">
+<div class="flex items-center justify-between w-full px-2">
+<span class="text-white text-body-md font-body-md font-medium">Capture Back Surface</span>
+<span class="text-on-primary-fixed-variant text-label-sm font-label-sm font-bold bg-primary-fixed px-3 py-1 rounded-full">1/5 Complete</span>
+</div>
+<div class="flex justify-between w-full px-4">
+<!-- Front (Complete) -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full bg-status-green flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-white text-[16px]" data-icon="check" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="text-white/70 text-[10px] font-semibold uppercase tracking-wider">Front</span>
+</div>
+<!-- Back (Active) -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center bg-white/20 shadow-[0_0_12px_rgba(255,255,255,0.4)]">
+<span class="material-symbols-outlined text-white text-[16px] animate-spin-slow" data-icon="sync">sync</span>
+</div>
+<span class="text-white text-[10px] font-bold uppercase tracking-wider">Back</span>
+</div>
+<!-- Left (Empty) -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-white/40"></span>
+</div>
+<span class="text-white/50 text-[10px] font-semibold uppercase tracking-wider">Left</span>
+</div>
+<!-- Right (Empty) -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-white/40"></span>
+</div>
+<span class="text-white/50 text-[10px] font-semibold uppercase tracking-wider">Right</span>
+</div>
+<!-- Top (Empty) -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-white/40"></span>
+</div>
+<span class="text-white/50 text-[10px] font-semibold uppercase tracking-wider">Top</span>
+</div>
+</div>
+</div>
+<!-- Primary Controls -->
+<div class="flex items-center justify-around w-full max-w-md mx-auto mb-8 mt-2">
+<!-- Flash Toggle -->
+<button class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="flash_on" style="font-variation-settings: 'FILL' 1;">flash_on</span>
+</button>
+<!-- Capture Button (Shutter) -->
+<button class="relative w-20 h-20 rounded-full border-4 border-white/30 flex items-center justify-center active:scale-95 transition-transform">
+<div class="w-[68px] h-[68px] bg-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.5)]">
+<span class="material-symbols-outlined text-black opacity-20 text-[24px]" data-icon="camera">camera</span>
+</div>
+</button>
+<!-- Gallery/Recent Scans -->
+<button class="w-12 h-12 rounded-[0.25rem] bg-white/10 flex items-center justify-center text-white border border-white/20 hover:bg-white/20 active:scale-95 transition-all overflow-hidden relative">
+<span class="material-symbols-outlined absolute z-10" data-icon="qr_code_scanner">qr_code_scanner</span>
+<!-- Thumbnail hint -->
+<div class="w-full h-full bg-cover bg-center opacity-40" data-alt="A small thumbnail image showing a close up of a barcode on a cardboard box, slightly darkened to serve as a background for the icon above it." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyV3TzFQWc99khvzjiHoTJUb0cvvExS_AIbExHNaHPxZBaeZavpFVeR44SW85rjmgwkP25BJgfP2LE1i7tvXec5ub0DopMqVGVXvJ3AiYHfpmugX4Iy4RxJDagHWRQ7Od7PwDTQzq6eLEF8zBCXpadW_mfhjShSkHKa2h9eIOeLjokuhno15cC0eolH-WDfwBdhnpm7FyYEq3jRX3F3pgHHwuotnoIUcmu7ZFraBZgrY7EQ74EoqoQcA')"></div>
+</button>
+</div>
+</div>
+</body></html>
